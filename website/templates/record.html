@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+    <h5 class="card-header">
+        {{ student_record.first_name }}
+        {{ student_record.last_name }}
+    </h5>
+    <div class="card-body">
+        <p class="card-text">
+            <strong>Major: </strong>{{ student_record.major }}
+        </p>
+        <p class="card-text">
+            <strong>Department: </strong>{{ student_record.department }}
+        </p>
+        <p class="card-text">
+            <strong>Class Level: </strong>{{ student_record.class_level }}
+        </p>
+        <p class="card-text">
+            <strong>GPA: </strong>{{ student_record.gpa }}
+        </p>
+        <p class="card-text">
+            <strong>Record Initiation Date: </strong>{{ student_record.created_at }}
+        </p>
+        <p class="card-text">
+            <strong>Student ID: </strong>{{ student_record.id }}
+        </p>
+        </p>
+    </div>
+</div>
+
+<br />
+<a href="{% url 'update_record' student_record.id %}" class="btn btn-dark">Update Record</a>
+<a href="{% url 'delete_record' student_record.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+
+{% endblock %}
