@@ -4,7 +4,7 @@ dataBase = mydb = mysql.connector.connect(
     host="localhost",
     port="3306",
     user="root",
-    password="omar0825",
+    password="coolproject123",
     auth_plugin="mysql_native_password",
 )
 

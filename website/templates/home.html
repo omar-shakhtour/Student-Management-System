@@ -50,9 +50,27 @@
 
             <input required type="password" class="form-control" name="password" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-dark">Login</button>
+        <div class="btn-toolbar">
+            <button type="submit" class="btn btn-dark">Login</button>
+
+            <button class="btn btn-success ms-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                Login Info for Beta Testers
+            </button>
+
+        </div>
+        <div style="min-height: 120px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                <div class="card card-body" style="width: 300px;">
+                    <strong>Username:</strong> admin
+                    <br />
+                    <strong>Password:</strong> coolproject123
+                </div>
+            </div>
+        </div>
     </form>
 </div>
+
 
 {% endif %}
 
